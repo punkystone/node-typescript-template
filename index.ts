@@ -1,2 +1,2 @@
 const test: string = "yeet";
-console.log(test);
+console.log(`TEST: ${test}`);
