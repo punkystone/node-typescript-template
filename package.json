@@ -4,20 +4,21 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "rollup --config rollup.config.ts --configPlugin swc3",
+    "build": "esbuild index.ts --bundle --platform=node --minify --outfile=build/index.js",
     "start": "node ./build/index.js",
-    "lint": "rome check index.ts"
+    "lint": "rome check index.ts",
+    "check": "tsc --noEmit --skipLibCheck"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@rollup/plugin-commonjs": "^25.0.2",
-    "@rollup/plugin-node-resolve": "^15.1.0",
-    "@swc/core": "^1.3.69",
-    "rollup": "^3.26.2",
-    "rollup-plugin-swc3": "^0.9.0",
-    "rome": "12.1.3"
+    "@types/ws": "^8.5.5",
+    "esbuild": "^0.18.13",
+    "rome": "12.1.3",
+    "typescript": "^5.1.6"
   },
-  "dependencies": {}
+  "dependencies": {
+    "ws": "^8.13.0"
+  }
 }
