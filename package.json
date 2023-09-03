@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "esbuild index.ts --bundle --platform=node --minify --outfile=build/index.js",
+    "build": "esbuild index.ts --bundle --platform=node --minify --packages=external --outfile=build/index.js",
     "start": "node ./build/index.js",
     "lint": "rome check index.ts",
     "check": "tsc --noEmit --skipLibCheck"
@@ -13,12 +13,8 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@types/ws": "^8.5.5",
     "esbuild": "^0.18.13",
     "rome": "12.1.3",
     "typescript": "^5.1.6"
-  },
-  "dependencies": {
-    "ws": "^8.13.0"
   }
 }

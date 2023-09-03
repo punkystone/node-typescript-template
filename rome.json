@@ -12,9 +12,11 @@
     "rules": {
       "all": true,
       "style": {
+        "all": true,
         "useBlockStatements": "off"
       },
       "nursery": {
+        "all": true,
         "noConsoleLog": "off"
       }
     }
