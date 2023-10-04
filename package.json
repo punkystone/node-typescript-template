@@ -4,17 +4,21 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "esbuild index.ts --bundle --platform=node --minify --packages=external --outfile=build/index.js",
+    "build": "esbuild src/index.ts --bundle --platform=node --minify --packages=external --outfile=build/index.js",
     "start": "node ./build/index.js",
-    "lint": "rome check index.ts",
+    "lint": "biome check src",
     "check": "tsc --noEmit --skipLibCheck"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "esbuild": "^0.18.13",
-    "rome": "12.1.3",
-    "typescript": "^5.1.6"
+    "@biomejs/biome": "1.2.2",
+    "esbuild": "^0.18.20",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "@types/tmi.js": "^1.8.4",
+    "tmi.js": "^1.8.5"
   }
 }
