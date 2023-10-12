@@ -1,6 +1,6 @@
 import { test } from "./test";
 
-const main = async (): Promise<void> => {
+const main = (): void => {
     const testResult: string = test();
     console.log(testResult);
 };
